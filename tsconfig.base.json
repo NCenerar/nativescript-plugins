@@ -28,6 +28,9 @@
       ],
       "@ncenerar/*": [
         "packages/*"
+      ],
+      "@ncenerar/nativescript-activelook-sdk": [
+        "packages/nativescript-activelook-sdk/index.d.ts"
       ]
     }
   },

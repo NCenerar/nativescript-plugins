@@ -63,7 +63,14 @@ module.exports = {
     // packages
     // build output is always in dist/packages
     '@ncenerar': {
-      'build-all': {
+      // @ncenerar/nativescript-activelook-sdk
+			'nativescript-activelook-sdk': {
+				build: {
+					script: 'nx run nativescript-activelook-sdk:build.all',
+					description: '@ncenerar/nativescript-activelook-sdk: Build',
+				},
+			},
+			'build-all': {
         script: 'nx run-many --target=build.all --all',
         description: 'Build all packages',
       },
@@ -73,7 +80,11 @@ module.exports = {
       description: '_____________  Focus (VS Code supported)  _____________',
     },
     focus: {
-      reset: {
+      'nativescript-activelook-sdk': {
+				script: 'nx run nativescript-activelook-sdk:focus',
+				description: 'Focus on @ncenerar/nativescript-activelook-sdk',
+			},
+			reset: {
         script: 'nx g @ncenerar/plugin-tools:focus-packages',
         description: 'Reset Focus',
       },

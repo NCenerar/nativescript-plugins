@@ -1,0 +1,72 @@
+{
+  "root": "packages/nativescript-activelook-sdk",
+  "projectType": "library",
+  "sourceRoot": "packages/nativescript-activelook-sdk",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "outputPath": "dist/packages/nativescript-activelook-sdk",
+        "tsConfig": "packages/nativescript-activelook-sdk/tsconfig.json",
+        "packageJson": "packages/nativescript-activelook-sdk/package.json",
+        "main": "packages/nativescript-activelook-sdk/index.d.ts",
+        "assets": [
+          "packages/nativescript-activelook-sdk/*.md",
+          "packages/nativescript-activelook-sdk/index.d.ts",
+          "LICENSE",
+          {
+            "glob": "**/*",
+            "input": "packages/nativescript-activelook-sdk/platforms/",
+            "output": "./platforms/"
+          }
+        ],
+        "dependsOn": [
+          {
+            "target": "build.all",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    },
+    "build.all": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "node tools/scripts/build-finish.ts nativescript-activelook-sdk"
+        ],
+        "parallel": false
+      },
+      "outputs": [
+        "dist/packages/nativescript-activelook-sdk"
+      ],
+      "dependsOn": [
+        {
+          "target": "build.all",
+          "projects": "dependencies"
+        },
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ]
+    },
+    "focus": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx g @nativescript/plugin-tools:focus-packages nativescript-activelook-sdk"
+        ],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/nativescript-activelook-sdk/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

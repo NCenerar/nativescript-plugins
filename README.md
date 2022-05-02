@@ -5,7 +5,7 @@ npm run setup
 npm start
 ```
 
-- @ncenerar
+- [@ncenerar/nativescript-activelook-sdk](packages/nativescript-activelook-sdk/README.md)
 
 # How to use?
 
