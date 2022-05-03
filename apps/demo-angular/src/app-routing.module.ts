@@ -6,7 +6,8 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
    { path: '', redirectTo: '/home', pathMatch: 'full' },
-   { path: 'home', component: HomeComponent }
+   { path: 'home', component: HomeComponent },
+	{ path: 'nativescript-activelook-sdk', loadChildren: () => import('./plugin-demos/nativescript-activelook-sdk.module').then(m => m.NativescriptActivelookSdkModule) }
 ];
 
 @NgModule({
