@@ -1,0 +1,72 @@
+{
+  "root": "packages/nativescript-hello-world",
+  "projectType": "library",
+  "sourceRoot": "packages/nativescript-hello-world",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "outputPath": "dist/packages/nativescript-hello-world",
+        "tsConfig": "packages/nativescript-hello-world/tsconfig.json",
+        "packageJson": "packages/nativescript-hello-world/package.json",
+        "main": "packages/nativescript-hello-world/index.d.ts",
+        "assets": [
+          "packages/nativescript-hello-world/*.md",
+          "packages/nativescript-hello-world/index.d.ts",
+          "LICENSE",
+          {
+            "glob": "**/*",
+            "input": "packages/nativescript-hello-world/platforms/",
+            "output": "./platforms/"
+          }
+        ],
+        "dependsOn": [
+          {
+            "target": "build.all",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    },
+    "build.all": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "node tools/scripts/build-finish.ts nativescript-hello-world"
+        ],
+        "parallel": false
+      },
+      "outputs": [
+        "dist/packages/nativescript-hello-world"
+      ],
+      "dependsOn": [
+        {
+          "target": "build.all",
+          "projects": "dependencies"
+        },
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ]
+    },
+    "focus": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "nx g @nativescript/plugin-tools:focus-packages nativescript-hello-world"
+        ],
+        "parallel": false
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/nativescript-hello-world/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

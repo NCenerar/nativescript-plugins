@@ -1,10 +1,10 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
-import { NativescriptActivelookSdkComponent } from './nativescript-activelook-sdk.component';
+import { ActiveLookComponent } from './nativescript-activelook-sdk.component';
 
 @NgModule({
-	imports: [NativeScriptCommonModule, NativeScriptRouterModule.forChild([{ path: '', component: NativescriptActivelookSdkComponent }])],
-  declarations: [NativescriptActivelookSdkComponent],
+	imports: [NativeScriptCommonModule, NativeScriptRouterModule.forChild([{ path: '', component: ActiveLookComponent }])],
+  declarations: [ActiveLookComponent],
   schemas: [ NO_ERRORS_SCHEMA]
 })
-export class NativescriptActivelookSdkModule {}
+export class ActiveLookModule {}

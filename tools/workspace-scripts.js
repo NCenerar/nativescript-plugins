@@ -70,6 +70,13 @@ module.exports = {
 					description: '@ncenerar/nativescript-activelook-sdk: Build',
 				},
 			},
+			// @ncenerar/nativescript-hello-world
+			'nativescript-hello-world': {
+				build: {
+					script: 'nx run nativescript-hello-world:build.all',
+					description: '@ncenerar/nativescript-hello-world: Build',
+				},
+			},
 			'build-all': {
         script: 'nx run-many --target=build.all --all',
         description: 'Build all packages',
@@ -83,6 +90,10 @@ module.exports = {
       'nativescript-activelook-sdk': {
 				script: 'nx run nativescript-activelook-sdk:focus',
 				description: 'Focus on @ncenerar/nativescript-activelook-sdk',
+			},
+			'nativescript-hello-world': {
+				script: 'nx run nativescript-hello-world:focus',
+				description: 'Focus on @ncenerar/nativescript-hello-world',
 			},
 			reset: {
         script: 'nx g @ncenerar/plugin-tools:focus-packages',

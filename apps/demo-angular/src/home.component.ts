@@ -8,6 +8,9 @@ export class HomeComponent {
 	demos = [
 	{
 		name: 'nativescript-activelook-sdk'
+	},
+	{
+		name: 'nativescript-hello-world'
 	}
 ];
 }
