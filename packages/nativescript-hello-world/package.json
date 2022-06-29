@@ -1,6 +1,6 @@
 {
   "name": "@ncenerar/nativescript-hello-world",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Add a plugin description",
   "main": "index",
   "typings": "index.d.ts",
