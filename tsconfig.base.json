@@ -31,6 +31,9 @@
       ],
       "@ncenerar/nativescript-activelook-sdk": [
         "packages/nativescript-activelook-sdk/index.d.ts"
+      ],
+      "@ncenerar/nativescript-hello-world": [
+        "packages/nativescript-hello-world/index.d.ts"
       ]
     }
   },

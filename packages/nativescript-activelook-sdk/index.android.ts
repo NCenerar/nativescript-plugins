@@ -1,5 +1,5 @@
-import { NativescriptActivelookSdkCommon } from './common';
+import { ActiveLookCommon } from './common';
 
-export class NativescriptActivelookSdk extends NativescriptActivelookSdkCommon {
+export class ActiveLook extends ActiveLookCommon {
 
 }

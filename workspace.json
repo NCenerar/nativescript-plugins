@@ -3,6 +3,7 @@
   "projects": {
     "demo": "apps/demo",
     "demo-angular": "apps/demo-angular",
-    "nativescript-activelook-sdk": "packages/nativescript-activelook-sdk"
+    "nativescript-activelook-sdk": "packages/nativescript-activelook-sdk",
+    "nativescript-hello-world": "packages/nativescript-hello-world"
   }
 }

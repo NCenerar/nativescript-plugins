@@ -5,7 +5,8 @@
   "repository": "<fill-your-repository-here>",
   "dependencies": {
     "@nativescript/core": "file:../../node_modules/@nativescript/core",
-    "@ncenerar/nativescript-activelook-sdk": "file:../../packages/nativescript-activelook-sdk"
+    "@ncenerar/nativescript-activelook-sdk": "file:../../packages/nativescript-activelook-sdk",
+    "@ncenerar/nativescript-hello-world": "file:../../packages/nativescript-hello-world"
   },
   "devDependencies": {
     "@nativescript/android": "~8.2.0",

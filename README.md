@@ -6,6 +6,7 @@ npm start
 ```
 
 - [@ncenerar/nativescript-activelook-sdk](packages/nativescript-activelook-sdk/README.md)
+- [@ncenerar/nativescript-hello-world](packages/nativescript-hello-world/README.md)
 
 # How to use?
 
